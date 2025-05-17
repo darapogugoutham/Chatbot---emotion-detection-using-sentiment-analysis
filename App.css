@@ -1,0 +1,113 @@
+/* src/App.css */
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f2f5;
+  padding: 20px;
+}
+
+.chat-container {
+  width: 100%;
+  max-width: 800px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+}
+
+.chat-messages {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  background: #f8f9fa;
+}
+
+.message {
+  margin-bottom: 15px;
+  display: flex;
+}
+
+.message.user {
+  justify-content: flex-end;
+}
+
+.message-content {
+  max-width: 70%;
+  padding: 12px 16px;
+  border-radius: 15px;
+  position: relative;
+}
+
+.message.user .message-content {
+  background: #007bff;
+  color: white;
+  border-bottom-right-radius: 3px;
+}
+
+.message.bot .message-content {
+  background: white;
+  color: #333;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  border-bottom-left-radius: 3px;
+}
+
+.message-meta {
+  margin-top: 8px;
+  font-size: 0.8rem;
+  display: flex;
+  gap: 8px;
+  color: #666;
+}
+
+.emotion-tag {
+  background: #e9ecef;
+  padding: 2px 8px;
+  border-radius: 10px;
+}
+
+.source-tag {
+  background: #d4edda;
+  padding: 2px 8px;
+  border-radius: 10px;
+  color: #155724;
+}
+
+.input-area {
+  display: flex;
+  padding: 20px;
+  border-top: 1px solid #eee;
+  background: white;
+}
+
+.input-area input {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+.input-area button {
+  padding: 12px 24px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.input-area button:disabled {
+  background: #6c757d;
+  cursor: not-allowed;
+}
+
+.input-area button:hover:not(:disabled) {
+  background: #0056b3;
+}
